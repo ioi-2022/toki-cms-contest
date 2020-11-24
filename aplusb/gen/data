@@ -1,0 +1,31 @@
+@subtask samples
+manual sample-1.in
+manual sample-2.in
+
+@testset randomSmallAB
+gen-random 10 10
+gen-random 10 10
+gen-random 10 10
+
+@testset randomAB
+gen-random 100 100
+gen-random 100 100
+gen-random 100 100
+
+@testset randomBZero
+gen-b-zero 100 100
+gen-b-zero 100 100
+
+@subtask smallAB
+manual max-small-test.in
+@include samples
+@include randomSmallAB
+gen-random 1 10
+
+@subtask bZero
+@include randomBZero
+
+@subtask full
+@include randomSmallAB
+@include randomAB
+manual max-test.in

@@ -1,0 +1,22 @@
+# Ignore all backups
+*~
+
+# Ignore .DS_Store from mac
+.DS_Store
+
+# Ignore .exe from Windows
+*.exe
+
+# Ignore class files from java
+*.class
+
+# Ignore tps derived directories
+tests/
+sandbox/
+logs/
+
+# Ignore tps compile
+*.compile.out
+
+# Ignore public zip
+*.zip
