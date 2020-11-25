@@ -49,8 +49,7 @@ This means that you are asked to find the result of adding $2$ and $3$. It can b
 
 ## Sample Grader
 
-The sample grader reads the input in the following format: The first line contains an integer $q$.
-After that, $q$ pairs of lines follow, and each pair describes a single scenario in the following format:
+The sample grader reads the input in the following format:
 
 * line $1$: $A\;B$
 
