@@ -24,3 +24,6 @@ logs/
 
 # Ignore python compile
 *.pyc
+
+# Ignore generated public grader
+*/public/cpp/grader.cpp
