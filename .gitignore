@@ -20,3 +20,7 @@ logs/
 
 # Ignore public zip
 *.zip
+
+
+# Ignore python compile
+*.pyc
