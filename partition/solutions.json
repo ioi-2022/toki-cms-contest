@@ -1,0 +1,9 @@
+{
+  "solution.cpp": {
+    "verdict": "model_solution"
+  },
+  "solution-no-memo.cpp": {
+    "verdict": "time_limit",
+    "except": {"samples": "correct", "Q-less-than-five": "correct"}
+  }
+}
