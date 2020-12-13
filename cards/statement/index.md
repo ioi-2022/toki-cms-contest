@@ -145,10 +145,10 @@ For each call to `find_discarded_card`:
 
 ## Subtasks
 
-1. (5 points) $K = 2$, $N = 3$.
-2. (11 points) $K = 3$, $N = 5$.
-3. (24 points) $K = 6$, $N = 12$.
-4. (60 points) $K = 8$, $N = 10\,000$.
+1. (5 points) $N \le 3$, $K = 2$.
+2. (11 points) $N le 5$, $K = 3$.
+3. (24 points) $N \le 12$, $K = 6$.
+4. (60 points) $N \le 10\,000$, $K = 8$.
 
 ## Sample Grader
 
