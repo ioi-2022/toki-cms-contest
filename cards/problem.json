@@ -3,7 +3,7 @@
   "code": "cards",
   "title": "Magic Cards",
   "memory_limit": 256,
-  "time_limit": 1.0,
+  "time_limit": 4.0,
   "type": "Communication",
   "num_processes": 2,
   "grader_name": "stub"

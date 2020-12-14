@@ -5,13 +5,13 @@
 
 using namespace std;
 
-int N, K;
+int K;
 int suit_size;
 
 vector<vector<int>> permutations;
 
-void init(int _N, int _K) {
-  N = _N; K = _K;
+void init(int _K) {
+  K = _K;
   suit_size = 1;
   for (int i = 1; i <= K - 2; ++i) suit_size *= i;
   suit_size = suit_size * 2 + 1;
@@ -23,9 +23,9 @@ void init(int _N, int _K) {
   } while (next_permutation(perm.begin(), perm.end()));
 }
 
-void init_assistant(int _N, int _K) { init(_N, _K); }
+void init_assistant(int, int _K) { init(_K); }
 
-void init_magician(int _N, int _K) { init(_N, _K); }
+void init_magician(int, int _K) { init(_K); }
 
 vector<int> choose_cards(vector<int> cards) {
   vector<int> suits[K - 1];

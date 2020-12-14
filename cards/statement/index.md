@@ -132,7 +132,7 @@ in that play, then `find_discarded_card` should return $1$.
 
 * $1 \le K \le 8$
 * $K \le N \le 10\,000$
-* $1 \le Q \le 100\,000$
+* $1 \le Q \le 50\,000$
 
 For each call to `choose_cards`:
 

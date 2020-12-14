@@ -1,5 +1,5 @@
 {
-  "global_validators": ["validator.cpp"],
+  "subtask_sensitive_validators": ["validator.cpp {subtask}"],
   "subtasks": {
     "samples": {
       "index": 0,
@@ -9,17 +9,17 @@
     "k2": {
       "index": 1,
       "score": 5,
-      "validators": ["validator.cpp"]
+      "validators": []
     },
     "k3": {
       "index": 2,
       "score": 11,
-      "validators": ["validator.cpp"]
+      "validators": []
     },
     "k6": {
       "index": 3,
       "score": 24,
-      "validators": ["validator.cpp"]
+      "validators": []
     },
     "full": {
       "index": 4,

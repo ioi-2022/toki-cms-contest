@@ -1,5 +1,17 @@
 {
   "solution.cpp": {
     "verdict": "model_solution"
+  },
+  "solution-k2.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "k2": "correct"
+    }
+  },
+  "solution-k3.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "k3": "correct"
+    }
   }
 }
