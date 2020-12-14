@@ -60,9 +60,9 @@ vector<int> choose_cards(vector<int> cards) {
   }
 
   vector<int> chosen_cards;
-  chosen_cards.push_back(pivot);
+  chosen_cards.push_back(pivot + 1);
   for (int i = 0; i < K - 2; ++i) {
-    chosen_cards.push_back(perm_card[permutations[delta - 1][i]]);
+    chosen_cards.push_back(perm_card[permutations[delta - 1][i]] + 1);
   }
 
   return chosen_cards;
@@ -81,6 +81,6 @@ int find_discarded_card(vector<int> cards) {
   }
 
   int suit_num = (cards[0] - 1) / suit_size;
-  int delta = lower_bound(permutations.begin(), permutations.end(), perm) - permutations.begin();
+  int delta = lower_bound(permutations.begin(), permutations.end(), perm) - permutations.begin() + 1;
   return ((cards[0] - 1) + delta) % suit_size + suit_num * suit_size + 1;
 }

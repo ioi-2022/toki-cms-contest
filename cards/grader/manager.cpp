@@ -101,10 +101,11 @@ int main(int argc, char *argv[]) {
     sigaction(SIGPIPE, &sa, NULL);
   }
 
-  grader1in = openFile(argv[1], "r");
+  // Must be in this order
   grader1out = openFile(argv[2], "a");
-  grader2in = openFile(argv[3], "r");
+  grader1in = openFile(argv[1], "r");
   grader2out = openFile(argv[4], "a");
+  grader2in = openFile(argv[3], "r");
 
   // Read input
   int N, K, Q;
@@ -181,7 +182,7 @@ int main(int argc, char *argv[]) {
   bool fail = false;
   for (int i = 0; i < Q; ++i) {
     for (int j = 0; j < K - 1; ++j) {
-      fprintf(grader2out, "%d\n", cards[i][j]);
+      fprintf(grader2out, "%d\n", queries[i][j]);
     }
     fflush(grader2out);
 
@@ -190,12 +191,12 @@ int main(int argc, char *argv[]) {
       die(_wa, false, "Could not read query response from second grader");
     }
 
-    if (guessCard != cards[i].back()) {
+    if (guessCard != queries[i].back()) {
       fail = true;
     }
   }
-  fclose(grader2out);
   fclose(grader2in);
+  fclose(grader2out);
 
   // Verdict
   if (fail) quitf(_wa, "Wrong response");

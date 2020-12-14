@@ -76,7 +76,7 @@ void graderB() {
     }
 
     fprintf(fout, "%d\n", find_discarded_card(cards));
-    fflush(stdout);
+    fflush(fout);
   }
 }
 
