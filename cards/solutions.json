@@ -11,7 +11,18 @@
   "solution-k3.cpp": {
     "verdict": "incorrect",
     "except": {
+      "samples": "correct",
+      "k2": "correct",
       "k3": "correct"
+    }
+  },
+  "solution-k6.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "k2": "correct",
+      "k3": "correct",
+      "k6": "correct"
     }
   }
 }
