@@ -1,6 +1,6 @@
 #include "cards.h"
 
-#include <vector>
+#include <bits/stdc++.h>
 
 int N;
 

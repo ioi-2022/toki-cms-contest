@@ -1,7 +1,6 @@
 #include "cards.h"
 
-#include <algorithm>
-#include <vector>
+#include <bits/stdc++.h>
 
 std::vector<std::vector<int>> leftNodes, rightNodes;
 

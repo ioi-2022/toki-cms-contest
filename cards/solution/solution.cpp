@@ -1,7 +1,6 @@
 #include "cards.h"
 
-#include <numeric>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 

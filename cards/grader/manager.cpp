@@ -2,6 +2,7 @@
 #include <cstdio>
 
 #include <algorithm>
+#include <random>
 #include <string>
 #include <vector>
 
@@ -68,6 +69,7 @@ NORETURN void quitpf(double points, const char* fmt, ...) {
 /********************************* End testlib-similar material *********************************/
 
 FILE *grader1in, *grader1out, *grader2in, *grader2out;
+std::mt19937 rng;
 
 #ifdef __GNUC__
 __attribute__ ((format (printf, 3, 4)))
@@ -176,7 +178,7 @@ int main(int argc, char *argv[]) {
     queries[i] = chosen_cards[i];
     queries[i].push_back(discardedCard);
   }
-  std::random_shuffle(queries.begin(), queries.end());
+  shuffle(queries.begin(), queries.end(), rng);
 
   // Send queries to second grader
   bool fail = false;
