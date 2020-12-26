@@ -155,7 +155,7 @@ For each call to `find_discarded_card`:
 The sample grader reads the input in the following format:
 
 * line $1$: $N \; K \; Q$
-* line $2 + i$ ($0 \le i \le Q - 1$): the $K$ cards chosen by the spectator in the $i$-th play.
+* line $2 + i$ ($0 \le i \le Q - 1$): the $K$ cards chosen by the spectator in the $i$-th play in increasing order.
 
 The sample grader prints the result in the following format:
 

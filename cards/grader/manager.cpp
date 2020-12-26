@@ -153,15 +153,13 @@ int main(int argc, char *argv[]) {
   std::vector<std::vector<int>> queries(Q);
   for (int i = 0; i < Q; ++i) {
     // Find discarded card
-    std::vector<int> sorted_cards = cards[i];
-    std::sort(sorted_cards.begin(), sorted_cards.end());
     std::vector<bool> chosen(K, false);
     for (int chosen_card : chosen_cards[i]) {
-      std::vector<int>::iterator it = std::lower_bound(sorted_cards.begin(), sorted_cards.end(), chosen_card);
-      if (it == sorted_cards.end()) {
+      std::vector<int>::iterator it = std::lower_bound(cards[i].begin(), cards[i].end(), chosen_card);
+      if (it == cards[i].end()) {
         die(_wa, true, "Invalid chosen card");
       }
-      int chosen_idx = std::distance(sorted_cards.begin(), it);
+      int chosen_idx = std::distance(cards[i].begin(), it);
       if (chosen[chosen_idx]) {
         die(_wa, true, "Chosen cards contain duplicate");
       }

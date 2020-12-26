@@ -36,12 +36,11 @@ int main(int, char *argv[]) {
     std::vector<int> cards(K);
     for (int j = 0; j < K; ++j) {
       cards[j] = inf.readInt(1, N, "card");
+      if (j > 0) ensuref(cards[j - 1] < cards[j],
+                         "Given cards are not in increasing order.");
       if (j < K - 1) inf.readSpace();
       else inf.readEoln();
     }
-    std::sort(cards.begin(), cards.end());
-    ensuref(std::unique(cards.begin(), cards.end()) == cards.end(),
-            "Given cards are not unique.");
   }
   inf.readEof();
   return 0;

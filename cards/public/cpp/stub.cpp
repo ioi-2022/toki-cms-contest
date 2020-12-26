@@ -2,6 +2,7 @@
 
 #include <cstdio>
 
+#include <algorithm>
 #include <vector>
 
 int main(int argc, char *argv[]) {
@@ -24,7 +25,7 @@ int main(int argc, char *argv[]) {
       exit(0);
     }
     for (int card : queries.back()) {
-      if (!binary_search(cards.begin(), cards.end(), card)) {
+      if (!std::binary_search(cards.begin(), cards.end(), card)) {
         printf("Card %d returned not found in given cards\n", card);
         exit(0);
       }
