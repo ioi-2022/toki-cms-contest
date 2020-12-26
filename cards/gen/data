@@ -1,0 +1,43 @@
+@subtask samples
+manual sample-1.in
+
+# K = 2; N <= 3
+@subtask k2
+gen 2 2 1
+gen 3 2 5
+gen 3 2 50000
+gen 3 2 50000
+
+# K = 3; N <= 5
+@subtask k3
+gen 3 3 1
+gen 4 3 5
+gen 5 3 5
+gen 4 3 50000
+gen 5 3 50000
+gen 5 3 50000
+
+# K = 6; N <= 12
+@subtask k6
+gen 6 6 1
+gen 7 6 100
+gen 8 6 100
+gen 9 6 100
+gen 10 6 100
+gen 11 6 100
+gen 12 6 100
+gen 10 6 50000
+gen 11 6 50000
+gen 12 6 50000
+gen 12 6 50000
+
+# K = 8; N <= 10000
+@subtask full
+gen 8 8 1
+gen 9 8 100
+gen 10 8 100
+gen 100 8 50000
+gen 1000 8 50000
+gen 10000 8 50000
+gen 10000 8 50000
+gen 10000 8 50000
