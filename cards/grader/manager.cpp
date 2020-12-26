@@ -150,8 +150,6 @@ int main(int argc, char *argv[]) {
   fclose(grader1in);
 
   // Validate chosen cards and shuffle queries
-  fprintf(grader2out, "0\n%d %d %d\n", N, K, Q);
-  fflush(grader2out);
   std::vector<std::vector<int>> queries(Q);
   for (int i = 0; i < Q; ++i) {
     // Find discarded card
@@ -181,6 +179,8 @@ int main(int argc, char *argv[]) {
   shuffle(queries.begin(), queries.end(), rng);
 
   // Send queries to second grader
+  fprintf(grader2out, "0\n%d %d %d\n", N, K, Q);
+  fflush(grader2out);
   bool fail = false;
   for (int i = 0; i < Q; ++i) {
     for (int j = 0; j < K - 1; ++j) {
