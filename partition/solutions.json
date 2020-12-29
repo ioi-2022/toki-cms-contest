@@ -2,6 +2,22 @@
   "solution.cpp": {
     "verdict": "model_solution"
   },
+  "solution-B_i-equals-i.cpp": {
+    "verdict": "incorrect",
+    "except": {"B-i_equals-i": "correct"}
+  },
+  "solution-Q-less-than-five.cpp": {
+    "verdict": "time_limit",
+    "except": {"samples": "correct", "Q-less-than-five": "correct"}
+  },
+  "solution-Y-equals-one.cpp": {
+    "verdict": "incorrect",
+    "except": {"Y-equals-one": "correct"}
+  },
+  "solution-X-equals-one.cpp": {
+    "verdict": "incorrect",
+    "except": {"X-equals-one": "correct"}
+  },
   "solution-no-memo.cpp": {
     "verdict": "time_limit",
     "except": {"samples": "correct", "Q-less-than-five": "correct"}
