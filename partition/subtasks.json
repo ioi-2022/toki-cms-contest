@@ -8,27 +8,27 @@
     },
     "B_i-equals-i": {
       "index": 1,
-      "score": 20,
+      "score": 9,
       "validators": []
     },
     "Q-less-than-five": {
       "index": 2,
-      "score": 20,
+      "score": 14,
       "validators": []
     },
     "Y-equals-one": {
       "index": 3,
-      "score": 20,
+      "score": 22,
       "validators": []
     },
     "X-equals-one": {
       "index": 4,
-      "score": 20,
+      "score": 31,
       "validators": []
     },
     "full": {
       "index": 5,
-      "score": 20,
+      "score": 24,
       "validators": []
     }
   }
