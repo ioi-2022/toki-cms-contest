@@ -5,10 +5,9 @@
 #include <algorithm>
 #include <functional>
 #include <iostream>
+#include <limits>
 #include <string>
 #include <vector>
-
-const double EPS = 1e-12;
 
 int main(int argc, char * argv[]) {
   registerChecker("origami", argc, argv);
@@ -57,19 +56,14 @@ int main(int argc, char * argv[]) {
         is.quitf(_wa, "Duplicated leaf index");
       }
 
-      X[leafIndex] = is.readDouble();
-      Y[leafIndex] = is.readDouble();
-
-      if (X[leafIndex] < -EPS || X[leafIndex] > 1 + EPS ||
-          Y[leafIndex] < -EPS || Y[leafIndex] > 1 + EPS) {
-        is.quitf(_wa, "Coordinates out of bound");
-      }
+      X[leafIndex] = is.readDouble(0, 1);
+      Y[leafIndex] = is.readDouble(0, 1);
     }
     if (!ouf.seekEof()) {
       is.quitf(_wa, "Extra output found");
     }
 
-    double efficiency = 10;
+    double efficiency = std::numeric_limits<double>::infinity();
     for (int i = 0; i < N; ++i) {
       if (!isLeaf[i]) continue;
       for (int j = i + 1; j < N; ++j) {
@@ -81,5 +75,5 @@ int main(int argc, char * argv[]) {
     return efficiency;
   };
 
-  quitp(std::min(1.0, getEfficiency(ouf) / getEfficiency(ans)) * 12.5 / 15);
+  quitp(std::min(1.0, getEfficiency(ouf) / getEfficiency(ans) * 12.5 / 15));
 }

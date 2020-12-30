@@ -55,6 +55,8 @@ Let $|L|$ be the number of leaf nodes in the input. Each output file is in the f
   * $j$ denotes the leaf node number (corresponds to the input),
   * $(x_j, y_j)$ denotes the point coordinate as the representative of node $j$.
 
+The leaf node numbers in the output file must be distinct.
+
 ## Example
 
 Consider the following input:
