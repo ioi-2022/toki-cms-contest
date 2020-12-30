@@ -1,6 +1,6 @@
 # Counting Partition
 
-Pak Dengklek have two arrays of $N$ integers, $A[0...N - 1]$ and $B[0...N - 1]$.
+Pak Dengklek have two arrays of $N$ integers, $A[0 \ldots N - 1]$ and $B[0 \ldots N - 1]$.
 For given parameters $(X, Y)$ (where $X$ and $Y$ are positive integers), Pak Dengklek would like to split the array $A$ into a maximum number of partitions of consecutive elements, such that in each partition except the last one:
 
 * Contains at least $B[Y - 1]$ elements.
@@ -12,7 +12,7 @@ The only requirement for the last partition is that it must contain at least one
 
 For example, suppose $N = 6, A = [1, 1, 2, 2, 1, 1], B = [1, 3, 3, 4, 5, 6]$.
 
-* For given parameters $(1, 1)$, Pak Dengklek can split $A$ into $4$ partitions: $[[1], [1], [2, 2, 1], [1]]$. Note that each partition, except the last, contains at least $B[0] = 1$ element, the integer $X = 1$ appears at least $Y= 1$ time, its last element is $X = 1$. Pak Dengklek cannot split $A$ into more than $4$ partitions.
+* For given parameters $(1, 1)$, Pak Dengklek can split $A$ into $4$ partitions: $[[1], [1], [2, 2, 1], [1]]$. Note that each partition, except the last, contains at least $B[0] = 1$ element, the integer $X = 1$ appears at least $Y = 1$ time, its last element is $X = 1$. Pak Dengklek cannot split $A$ into more than $4$ partitions.
 * For given parameters $(1, 2)$, Pak Dengklek can split $A$ into $2$ partitions: $[[1, 1, 2, 2, 1], [1]$. Note that splitting $A$ to $[[1, 1], [2, 2, 1, 1]]$ is not valid as the first partition should contain at least $B[1] = 3$ elements.
 * For given parameters $(2, 3)$, integer $X = 2$ should appear at least $Y = 3$ times in each partition except the last one. Since integer $2$ only appears $2$ times in $A$, Pak Dengklek cannot split $A$ into more than one partition.
 
@@ -49,11 +49,11 @@ Consider the following call:
 init(6, [1, 1, 2, 2, 1, 1], [1, 3, 3, 4, 5, 6])
 ```
 
-Let's say the grader calls `count_partition(1, 1)`. As illustrated above, the call should return $4$.
+Let's say the grader calls `count_partition(1, 1)`. As described above, the call should return $4$.
 
-Let's say the grader calls `count_partition(1, 2)`. As illustrated above, the call should return $2$.
+Let's say the grader calls `count_partition(1, 2)`. As described above, the call should return $2$.
 
-Let's say the grader calls `count_partition(2, 3)`. As illustrated above, the call should return $1$.
+Let's say the grader calls `count_partition(2, 3)`. As described above, the call should return $1$.
 
 ### Example 2
 
@@ -92,9 +92,9 @@ Let's say the grader calls `count_partition(3, 1)`. Pak Dengklek can split $A$ i
 The sample grader reads the input in the following format:
 
 * line $1$: $N \; Q$
-* line $2$: $A[0] \; A[1] \; ... \; A[N - 1]$
-* line $3$: $B[0] \; B[1] \; ... \; B[N - 1]$
-* line $3 + i $ ($0 \le i \le Q - 1$): $X$ $Y$ for the $i$-th call to `count_partition`
+* line $2$: $A[0] \; A[1] \; \ldots \; A[N - 1]$
+* line $3$: $B[0] \; B[1] \; \ldots \; B[N - 1]$
+* line $4 + i$ ($0 \le i \le Q - 1$): $X$ $Y$ for the $i$-th call to `count_partition`
 
 The sample grader prints the result in the following format:
 
