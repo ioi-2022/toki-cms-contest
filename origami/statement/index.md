@@ -44,7 +44,7 @@ You are not supposed to submit any source code for this task.
 Each input file describes a weighted unrooted tree. The format is as follows:
 
 * line $1$: $N$
-* line $2 + i$ ($0 \le i \le N + 2$): three integers $u_i$, $v_i$, and $w_i$, which means the
+* line $2 + i$ ($0 \le i \le N - 2$): three integers $u_i$, $v_i$, and $w_i$, which means the
   $i$-th edge connects node $u_i$ and node $v_i$ with weight $w_i$
 
 ## Output Format
@@ -84,7 +84,7 @@ The efficiency of the given sample is $0.25$.
 * $3 \le N \le 12$
 * $1 \le u_i, v_i \le N$ (for all $0 \le i \le N - 2$)
 * $1 \le w_i \le 4$ (for all $0 \le i \le N - 2$)
-* The given edges form a tree
+* The given edges form a tree.
 
 ## Scoring
 
@@ -92,3 +92,21 @@ If your output for a test case is not valid, your score for that test case will 
 the score that you obtain depends on the efficiency obtained by the judge. If $t_a$ denotes the
 efficiency that you obtained and $t_b$ denotes the efficiency that the judge obtained, then the
 score will be $\min(15, 12.5 \times t_a / t_b)$. Notice that your total score may exceed $100$.
+
+To give you some view, the following are all the eight trees from every test case. The length of
+the edges on each tree are proportional to their weights.
+
+![](test_cases.png)
+
+Following are the efficiency obtained by the judge for each test case:
+
+| Test Case | Efficiency |
+| --------- | ---------- |
+| 1         | 0.517632   |
+| 2	        | 0.5        |
+| 3         | 0.353553   |
+| 4         | 0.300463   |
+| 5         | 0.210628   |
+| 6         | 0.144815   |
+| 7         | 0.0957     |
+| 8         | 0.143613   |
