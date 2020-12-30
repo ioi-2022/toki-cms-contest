@@ -13,7 +13,8 @@ taste.
 
 In this problem, you will be given a weighted unrooted tree with $N$ nodes. Nodes are numbered from
 $1$ to $N$. Let $L$ be the set of all $i$, where the $i$-th node is the leaf node. You must map
-every leaf node $i$ to a point on a square area. More precisely:
+every leaf node $i$ to a point on a square area. Two leaf nodes may be mapped to the same point.
+More precisely:
 
 > For every $i$, which is the element of $L$, represents the $i$-th node as a point $P_i$ on
   $(x_i, y_i)$ with $0 \le x_i, y_i \le 1$

@@ -49,7 +49,7 @@ int main(int argc, char * argv[]) {
     std::vector<double> X(N, -1), Y(N, -1);
     for (int i = 0; i < leafCount; ++i) {
       int leafIndex = is.readInt(1, N, "leafIndex") - 1;
-      if (leafIndex < 0 || leafIndex >= N || !isLeaf[leafIndex]) {
+      if (!isLeaf[leafIndex]) {
         is.quitf(_wa, "Invalid leaf index");
       }
       if (X[leafIndex] > -0.5) {
