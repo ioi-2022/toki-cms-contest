@@ -103,7 +103,7 @@ Following are the efficiency obtained by the judge for each test case:
 | Test Case | Efficiency |
 | --------- | ---------- |
 | 1         | 0.517632   |
-| 2	        | 0.5        |
+| 2         | 0.5        |
 | 3         | 0.353553   |
 | 4         | 0.300463   |
 | 5         | 0.210628   |
