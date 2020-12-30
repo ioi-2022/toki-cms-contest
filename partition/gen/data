@@ -1,7 +1,6 @@
 @subtask samples
 manual sample-1.in
 manual sample-2.in
-manual sample-3.in
 
 @testset smallest-case
 manual smallest-case.in
