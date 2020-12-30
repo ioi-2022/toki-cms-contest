@@ -48,7 +48,7 @@ int main(int argc, char * argv[]) {
   std::function<double(InStream&)> getEfficiency = [&](InStream &is) {
     std::vector<double> X(N, -1), Y(N, -1);
     for (int i = 0; i < leafCount; ++i) {
-      int leafIndex = is.readInt() - 1;
+      int leafIndex = is.readInt(1, N, "leafIndex") - 1;
       if (leafIndex < 0 || leafIndex >= N || !isLeaf[leafIndex]) {
         is.quitf(_wa, "Invalid leaf index");
       }
@@ -56,8 +56,8 @@ int main(int argc, char * argv[]) {
         is.quitf(_wa, "Duplicated leaf index");
       }
 
-      X[leafIndex] = is.readDouble(0, 1);
-      Y[leafIndex] = is.readDouble(0, 1);
+      X[leafIndex] = is.readDouble(0, 1, "X");
+      Y[leafIndex] = is.readDouble(0, 1, "Y");
     }
     if (!ouf.seekEof()) {
       is.quitf(_wa, "Extra output found");
