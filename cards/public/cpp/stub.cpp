@@ -1,11 +1,12 @@
 #include "cards.h"
 
+#include <cassert>
 #include <cstdio>
 
 #include <algorithm>
 #include <vector>
 
-int main(int argc, char *argv[]) {
+int main() {
   int N, K, Q;
   assert(scanf("%d %d %d", &N, &K, &Q) == 3);
   
