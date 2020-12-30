@@ -4,7 +4,7 @@
   },
   "solution-B_i-equals-i.cpp": {
     "verdict": "incorrect",
-    "except": {"B-i_equals-i": "correct"}
+    "except": {"samples": "correct", "B-i_equals-i": "correct"}
   },
   "solution-Q-less-than-five.cpp": {
     "verdict": "time_limit",
