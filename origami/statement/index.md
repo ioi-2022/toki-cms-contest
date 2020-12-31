@@ -93,12 +93,12 @@ the score that you obtain depends on the efficiency obtained by the judge. If $t
 efficiency that you obtained and $t_b$ denotes the efficiency that the judge obtained, then the
 score will be $\min(15, 12.5 \times t_a / t_b)$. Notice that your total score may exceed $100$.
 
-To give you some view, the following are all the eight trees from every test case. The length of
-the edges on each tree are proportional to their weights.
+To give you some visualization, the following are all the eight trees from every test case. The
+length of the edges on each tree are proportional to their weights.
 
 ![](test_cases.png)
 
-Following are the efficiency obtained by the judge for each test case:
+The following are the efficiency obtained by the judge for each test case:
 
 | Test Case | Efficiency |
 | --------- | ---------- |
