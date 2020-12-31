@@ -1,0 +1,23 @@
+@subtask subtask1
+manual origami_1.in
+
+@subtask subtask2
+manual origami_2.in
+
+@subtask subtask3
+manual origami_3.in
+
+@subtask subtask4
+manual origami_4.in
+
+@subtask subtask5
+manual origami_5.in
+
+@subtask subtask6
+manual origami_6.in
+
+@subtask subtask7
+manual origami_7.in
+
+@subtask subtask8
+manual origami_8.in
