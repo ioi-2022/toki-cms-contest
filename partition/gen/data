@@ -27,6 +27,8 @@ gen must-jump 100000 100000 100000 100000 2 1000000000
 @subtask Q-less-than-five
 @include samples
 @include smallest-case
+gen must-use-binary-search 100000 100000 5 5 2 1000000000
+gen random 100000 100000 5 5 1 100 1 1
 gen random 10000 49999 5 5 1 100 0 0
 gen random 50000 99999 5 5 1 100 0 0
 gen random 100000 100000 5 5 1 100 0 0
