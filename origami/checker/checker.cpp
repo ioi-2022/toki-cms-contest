@@ -75,5 +75,10 @@ int main(int argc, char * argv[]) {
     return efficiency;
   };
 
-  quitp(std::min(1.0, getEfficiency(ouf) / getEfficiency(ans) * 12.5 / 15));
+  double score = std::min(1.0, getEfficiency(ouf) / getEfficiency(ans));
+  if (score == 1.0) {
+    quit(_ok);
+  } else {
+    quitp(score);
+  }
 }
