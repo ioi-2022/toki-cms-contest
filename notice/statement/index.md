@@ -10,7 +10,8 @@ There are some "output-only" tasks, for which:
 For other tasks:
 * The attachment package contains sample graders, sample implementations, example test cases, and compile scripts.
 * You may make up to 50 submissions for each task, and you have to submit exactly one file in each submission.
-* The name of the file that you should submit is given in the task statement header.
+* The name of the file that you should submit is given in the task statement header. It should implement the procedures described in the task statement using the signatures provided in the sample implementations.
+* You are free to implement other procedures.
 * Your submissions **must not** perform any of the following actions, which result in an unspecified grading verdict (typically `Security Violation`):
   * read from the standard input, write to the standard output, or interact with any other file,
   * call `exit()`.
