@@ -2,7 +2,7 @@
   "name": "cards",
   "code": "cards",
   "title": "Magic Cards",
-  "memory_limit": 256,
+  "memory_limit": 1024,
   "time_limit": 4.0,
   "type": "Communication",
   "num_processes": 2,
