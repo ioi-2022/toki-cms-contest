@@ -155,9 +155,18 @@ For each call to `find_discarded_card`:
 The sample grader reads the input in the following format:
 
 * line $1$: $N \; K \; Q$
-* line $2 + i$ ($0 \le i \le Q - 1$): the $K$ cards chosen by the spectator in the $i$-th play in increasing order.
+* line $2 + i$ ($0 \le i \le Q - 1$): the $K$ cards chosen by the spectator in the $i$-th play in
+  increasing order.
 
-The sample grader prints the result in the following format:
+For each play, if the trick is played correctly, the sample grader prints
+`Accepted: chosen_cards = [chosen_cards]; discarded_card = [discarded_card]`, where
+`[chosen_cards]` is the cards returned by `choose_cards` and `[discarded_card]` is the card
+returned by `find_discarded_card`.
 
-* line $1 + i$ ($0 \le i \le Q - 1$): the card number returned by the $i$-th call to
-  `find_discarded_card`.
+For each play, if the trick is failed to be played correctly, the sample grader prints
+`Wrong Answer: MSG`. The meaning of `MSG` is as follows:
+- `invalid number of chosen cards`: the number of cards returned by `chosen_cards` is
+  incorrect.
+- `invalid chosen card number`: any of the card numbers returned by `chosen_cards` is invalid.
+- `duplicated chosen cards`: there exist two cards returned by `chosen_cards` with the same number.
+- `wrong discarded card`: the card returned by `find_discarded_card` is not correct.
