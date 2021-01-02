@@ -1,3 +1,5 @@
+@echo off
+
 set problem=aplusb
 set grader_name=grader
 

@@ -1,3 +1,5 @@
+@echo off
+
 set problem=partition
 set grader_name=grader
 
