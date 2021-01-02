@@ -89,18 +89,18 @@ The efficiency of the given sample is $0.25$.
 ## Scoring
 
 If your output for a test case is not valid, your score for that test case will be $0$. Otherwise,
-the score that you obtain depends on the efficiency obtained by the judge. If $t_a$ denotes the
-efficiency that you obtained and $t_b$ denotes the efficiency that the judge obtained, then the
-score will be $\min(15, 12.5 \times t_a / t_b)$. Notice that your total score may exceed $100$.
+the score that you obtain depends on the value $f$ which varies by testcase. For each test case, if
+$e$ denotes the efficiency that you obtained, then the score will be
+$\min(12.5, 12.5 \times e / f)$.
 
 To give you some visualization, the following are all the eight trees from every test case. The
 length of the edges on each tree are proportional to their weights.
 
 ![](test_cases.png)
 
-The following are the efficiency obtained by the judge for each test case:
+The following are the value of $f$ for each test case:
 
-| Test Case | Efficiency |
+| Test Case | $f$        |
 | --------- | ---------- |
 | 1         | 0.517632   |
 | 2         | 0.5        |
