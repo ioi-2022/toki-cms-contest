@@ -2,7 +2,7 @@
   "name": "aplusb",
   "code": "aplusb",
   "title": "A Plus B",
-  "memory_limit": 256,
+  "memory_limit": 1024,
   "time_limit": 1.0,
   "type": "Batch"
 }

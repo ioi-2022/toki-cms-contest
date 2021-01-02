@@ -33,6 +33,7 @@ In each of the supported programming languages, the graders use appropriate data
 
 | Task      | Name               | Time limit  | Memory Limit |
 | --------- | ------------------ | ----------- | ------------ |
+| aplusb    | A Plus B           | 1 sec       | 1 GiB        |
 | cards     | Magic Cards        | 4 sec       | 1 GiB        |
 | origami   | Origami Design     | output-only | output-only  |
 | partition | Counting Partition | 1 sec       | 1 GiB        |
