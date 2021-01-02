@@ -1,3 +1,5 @@
+@echo off
+
 set problem=cards
 set grader_name=stub
 
