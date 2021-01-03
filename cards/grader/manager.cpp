@@ -1,4 +1,5 @@
 #include <csignal>
+#include <cstdarg>
 #include <cstdio>
 
 #include <algorithm>
