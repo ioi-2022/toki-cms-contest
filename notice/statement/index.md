@@ -4,7 +4,7 @@ Each task has an attachment package that you can download from the contest syste
 
 There are some "output-only" tasks, for which:
 * The attachment package contains input test cases and example test cases. Each test case is a separate subtask.
-* You may submit multiple output files as a zip file. For this purpose, your output files should be named `??.out`, where `??` is the test case number (e.g., `03.out`).
+* You may submit multiple output files as a zip file. For this purpose, your output files should be named `output_??.txt`, where `??` is the test case number (e.g., `output_03.txt`).
 * You may make up to 100 submissions for output-only tasks. In each submission, you may submit the output files for any subset of the test cases.
 
 For other tasks:
