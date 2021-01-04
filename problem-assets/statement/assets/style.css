@@ -1484,6 +1484,18 @@ footer>p:hover {
 	padding-right: 15px;
 }
 
+.header .contest {
+	float: left;
+	font-family: "Verdana";
+	text-align: left;
+	font-size: 16px;
+}
+
+.header .contest div:first-child {
+	font-weight: bold;
+	font-size: 20px;
+}
+
 .header .meta {
 	float: right;
 	text-align: right;
