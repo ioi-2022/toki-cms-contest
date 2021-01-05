@@ -4,7 +4,7 @@
   },
   "solution-B_i-equals-i.cpp": {
     "verdict": "incorrect",
-    "except": {"samples": "correct", "B-i_equals-i": "correct"}
+    "except": {"samples": "correct", "B_i-equals-i": "correct"}
   },
   "solution-Q-less-than-five.cpp": {
     "verdict": "time_limit",
@@ -21,5 +21,8 @@
   "solution_tle_nomemo.cpp": {
     "verdict": "time_limit",
     "except": {"samples": "correct", "Q-less-than-five": "correct"}
+  },
+  "prabowo_ac.cpp": {
+    "verdict": "correct"
   }
 }
