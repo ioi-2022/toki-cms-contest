@@ -77,7 +77,7 @@ int main(int argc, char * argv[]) {
 
   double score = std::min(1.0, getEfficiency(ouf) / getEfficiency(ans));
   // Ensure that there are at most 2 digits behind the decimal in score * 12.5.
-  score = round(score * 250) / 250;
+  score = round(score * 1250) / 1250;
   if (score == 1.0) {
     quit(_ok);
   } else {

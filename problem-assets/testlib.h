@@ -2551,10 +2551,10 @@ NORETURN void InStream::quit(TResult result, const char* msg)
         case _points:
             if (__testlib_points < 1e-5)
                 pointsStr = "0.00001";//prevent zero scores in CMS as zero is considered wrong
-            else if (__testlib_points < 0.001)
+            else if (__testlib_points < 0.0001)
                 pointsStr = format("%lf", __testlib_points);//prevent rounding the numbers below 0.001
             else
-                pointsStr = format("%.3lf", __testlib_points);
+                pointsStr = format("%.4lf", __testlib_points);
             color = LightYellow;
             errorName = "Partially Correct";
             break;
