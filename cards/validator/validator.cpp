@@ -10,7 +10,7 @@ const int kMaxQ = 50000;
 int main(int, char *argv[]) {
   registerValidation();
 
-  int maxN = kMaxN, minK = 1, maxK = kMaxK, maxQ = kMaxQ;
+  int maxN = kMaxN, minK = 2, maxK = kMaxK, maxQ = kMaxQ;
   if (strcmp(argv[1], "k2") == 0) {
     maxN = 3;
     minK = maxK = 2;
