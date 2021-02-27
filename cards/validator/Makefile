@@ -1,1 +1,1 @@
-../../problem-assets/Makefile
+../../tps/problem-assets/Makefile
