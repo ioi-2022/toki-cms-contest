@@ -15,7 +15,8 @@ tests/
 sandbox/
 logs/
 
-# Ignore tps compile
+# Ignore tps compile and error
+*.err.out
 *.compile.out
 
 # Ignore public zip

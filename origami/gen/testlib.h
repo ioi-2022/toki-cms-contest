@@ -1,1 +1,1 @@
-../../problem-assets/testlib.h
+../../tps/problem-assets/testlib.h
