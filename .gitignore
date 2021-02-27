@@ -29,3 +29,6 @@ logs/
 # Ignore generated public grader
 */public/cpp/grader.cpp
 */public/cpp/*.h
+
+# Ignore generated gen/data
+*/gen/data
