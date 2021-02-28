@@ -1,29 +1,36 @@
-testcase_index = 0
+TESTSET_PREFIX = "Testset"
 
 
 def manual(testcase):
   print(f"manual {testcase}.in")
 
 def include(include):
-  print(f"@include {include.name or include.__name__}")
+  print(f"@include {include.name or include.__name__[len(TESTSET_PREFIX):]}")
 
-def gen_random(maxA=100, maxB=100):
-  global testcase_index
+def indexify_testcases(gen_func):
+  testcase_index = 0
+  def _gen_func(*args):
+    nonlocal testcase_index
+    gen_func(*args, testcase_index=testcase_index)
+    testcase_index += 1
+  return _gen_func
+
+@indexify_testcases
+def gen_random(maxA=100, maxB=100, testcase_index=0):
   print(f"gen-random {maxA} {maxB} {testcase_index}")
-  testcase_index += 1
 
-def gen_b_zero(maxA=100):
-  global testcase_index
+@indexify_testcases
+def gen_b_zero(maxA=100, testcase_index=0):
   print(f"gen-b-zero {maxA} {testcase_index}")
-  testcase_index += 1
 
 
 class Testset():
   name = None
 
   def __init__(self):
+    assert self.__class__.__name__.startswith(TESTSET_PREFIX)
     print("")
-    print(f"@testset {self.__class__.__name__}")
+    print(f"@testset {self.__class__.__name__[len(TESTSET_PREFIX):]}")
 
 
 class Subtask():
