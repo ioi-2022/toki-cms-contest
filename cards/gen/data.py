@@ -1,13 +1,17 @@
-testcase_index = 0
-
-
 def manual(testcase):
   print(f"manual {testcase}.in")
 
-def gen(n, k, q):
-  global testcase_index
+def indexify_testcases(gen_func):
+  testcase_index = 0
+  def _gen_func(*args):
+    nonlocal testcase_index
+    gen_func(*args, testcase_index=testcase_index)
+    testcase_index += 1
+  return _gen_func
+
+@indexify_testcases
+def gen(n, k, q, testcase_index=0):
   print(f"gen {n} {k} {q} {testcase_index}")
-  testcase_index += 1
 
 
 class Subtask():
