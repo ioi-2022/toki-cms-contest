@@ -1,49 +1,61 @@
-testcase_index = 0
+TESTSET_PREFIX = 'Testset'
 
 
 def manual(testcase):
   print(f"manual {testcase}.in")
 
 def include(include):
-  print(f"@include {include.name or include.__name__}")
+  print(f"@include {include.name or include.__name__[len(TESTSET_PREFIX):]}")
 
+def indexify_testcases(gen_func):
+  testcase_index = 0
+  def _gen_func(*args):
+    nonlocal testcase_index
+    gen_func(*args, testcase_index=testcase_index)
+    testcase_index += 1
+  return _gen_func
+
+
+maxN = 100000
+maxQ = 100000
+maxElem = 1000000000
+
+
+@indexify_testcases
 def gen_random(minN, maxN, minQ, maxQ, minElem, maxElem,
-               xEqualsOne, yEqualsOne):
-  global testcase_index
+               xEqualsOne, yEqualsOne, testcase_index):
   print(f"gen random {minN} {maxN} {minQ} {maxQ} {minElem} {maxElem} "
         f"{xEqualsOne} {yEqualsOne} {testcase_index}")
-  testcase_index += 1
 
-def gen_sqrt(minN, maxN, minQ, maxQ):
-  global testcase_index
+@indexify_testcases
+def gen_sqrt(minN, maxN, minQ, maxQ, testcase_index):
   print(f"gen sqrt {minN} {maxN} {minQ} {maxQ} {testcase_index}")
-  testcase_index += 1
 
-def gen_must_jump(minN, maxN, minQ, maxQ, minElem, maxElem):
-  global testcase_index
+@indexify_testcases
+def gen_must_jump(minN, maxN, minQ, maxQ, minElem, maxElem, testcase_index):
   print(f"gen must-jump {minN} {maxN} {minQ} {maxQ} {minElem} {maxElem} "
         f"{testcase_index}")
-  testcase_index += 1
 
-def gen_must_use_binary_search(minN, maxN, minQ, maxQ, minElem, maxElem):
-  global testcase_index
+@indexify_testcases
+def gen_must_use_binary_search(minN, maxN, minQ, maxQ, minElem, maxElem,
+                               testcase_index):
   print(f"gen must-use-binary-search {minN} {maxN} {minQ} {maxQ} "
         f"{minElem} {maxElem} {testcase_index}")
-  testcase_index += 1
 
-def gen_must_memoize_answer(minN, maxN, minQ, maxQ, minElem, maxElem):
-  global testcase_index
+@indexify_testcases
+def gen_must_memoize_answer(minN, maxN, minQ, maxQ, minElem, maxElem,
+                            testcase_index):
   print(f"gen must-memoize-answer {minN} {maxN} {minQ} {maxQ} "
         f"{minElem} {maxElem} {testcase_index}")
-  testcase_index += 1
 
 
 class Testset():
   name = None
 
   def __init__(self):
+    assert self.__class__.__name__.startswith(TESTSET_PREFIX)
     print("")
-    print(f"@testset {self.__class__.__name__}")
+    print(f"@testset {self.__class__.__name__[len(TESTSET_PREFIX):]}")
 
 
 class Subtask():
@@ -52,11 +64,6 @@ class Subtask():
   def __init__(self):
     print("")
     print(f"@subtask {self.name}")
-
-
-maxN = 100000
-maxQ = 100000
-maxElem = 1000000000
 
 
 class TestsetSmallestCase(Testset):
